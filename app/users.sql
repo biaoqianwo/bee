@@ -1,0 +1,15 @@
+CREATE TABLE `users` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+	`uuid` CHAR(32) NULL DEFAULT NULL,
+	`name` VARCHAR(32) NOT NULL COMMENT '用户名',
+	`email` VARCHAR(32) NULL DEFAULT NULL COMMENT '邮箱',
+	`pwd` VARCHAR(64) NOT NULL COMMENT '密码',
+	`sex` ENUM('M','F','S') NOT NULL DEFAULT 'S' COMMENT '表数量',
+	`status` TINYINT(4) NOT NULL DEFAULT '1' COMMENT '\'不显示\', \'显示\', \'推荐\'',
+	`created_at` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '创建时间',
+	`remark` TEXT NULL,
+	PRIMARY KEY (`id`)
+)
+COMMENT='用户表'
+COLLATE='utf8_general_ci'
+ENGINE=MyISAM;

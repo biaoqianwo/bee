@@ -1,0 +1,25 @@
+{
+  "name": "allen/bee",
+  "description": "A micro PHP framework for study",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "lixiang80",
+      "email": "704872038@qq.com"
+    }
+  ],
+  "require": {
+    "noahbuscher/macaw": "dev-master",
+    "biaoqianwo/simplePdo": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "classmap": [
+      "app/controllers",
+      "app/models"
+    ]
+  }
+}
